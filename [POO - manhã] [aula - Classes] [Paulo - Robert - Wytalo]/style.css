@@ -2,23 +2,31 @@
     display: flex;
     gap: 12px;
 }
+.card:hover{
+    background-color: #ffb6c1;
+}
+
+
 
 .card{
     border-radius: 16px;
     border: 1px solid #dddddd;
     padding: 20px;
-
+    margin: 10px;
     box-shadow: #aaaaaa 2px 2px 4px;
-
     display: flex;
     flex-direction: column;
 
 }
 
 .foto{
-    width: 220px;
-    height: 280px;
-    object-fit: cover;
+    width: 13vh;
+    flex-direction: column;
+    height: 10vh;
+    display: flex;
+    margin: auto;
+    padding: auto;
+
 }
 .info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

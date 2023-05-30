@@ -46,31 +46,31 @@ var celular5 = new Celular(
     "nokia.jpg"
 )
 
-var tv1 = new TV (
+var tv1 = new TV(
     "Samsung",
     "S95B Smart 4K OLED TV 2022",
     "65”",
     "tv1.avif"
 )
-var tv2 = new TV (
+var tv2 = new TV(
     "Sony",
     "a95k",
     "55”",
     "tv2.jpg"
 )
-var tv3 = new TV (
+var tv3 = new TV(
     "LG",
     "tv lg 55 oled c9psa",
     "55”",
     "tv3.jpg"
 )
-var tv4 = new TV (
+var tv4 = new TV(
     "Samsung",
     "Samsung 65QN90B",
     "65”",
     "tv4.jpg"
 )
-var tv5 = new TV (
+var tv5 = new TV(
     "Xiaomi",
     "Mi TV Lux",
     "55”",
@@ -80,34 +80,63 @@ var tv5 = new TV (
 
 var celulares = []
 celulares.push(celular1, celular2, celular3, celular4, celular5)
-document.write(`
+for (i = 0; i < celulares.length; i++) {
+    document.write(`
 <div class='card'>
 
-    <img class='foto' src='img/${celular1.imagem}'/>
+    <img class='foto' src='img/${celulares[i].imagem}'/>
     <div class='info'>
 
-        <h3 class='modelo'>${celular1.modelo}</h3>
-        <p class='marca'>${celular1.marca}</p>
-
-    <span class='outros'>${celular1.processador}</span>
+        <h3 class='modelo'>${celulares[i].modelo}</h3>
+        <p class='marca'>${celulares[i].marca}</p>
+    <span class='outros'>${celulares[i].processador}</span>
     <span class='separador'>|</span>
-    <span class='outros'>${celular1.armazenamento}</span>
+    <span class='outros'>${celulares[i].armazenamento}</span>
     <span class='separador'>|</span>
-    <span class='outros'>${celular1.ram}</span>
+    <span class='outros'>${celulares[i].ram}</span>
     <span class='separador'>|</span>
-    <span class='outros'>${celular1.cameras}</span>
+    <span class='outros'>${celulares[i].cameras}</span>
     <span class='separador'>|</span>
-    
     </div>
     </div>
+    <br>
     `)
+}
+var tvs=[]
+tvs.push(tv1,tv2,tv3,tv4,tv5)
+for(i=0;i < tvs.length;i++){
+document.write(`
+    <div class='card'>
+    <img class='foto' src='img/${tvs[i].foto}'/>
+    <div class='info'>
 
-    document.write(`
-    <img class='foto' src='img/${tv1.foto}'/>
-    <span class='outros'>${tv1.marca}</span>
+    <span class='outros'>${tvs[i].marca}</span>
     <span class='separador'>|</span> 
-    <span class='outros'>${tv1.modelo}</span>
+    <span class='outros'>${tvs[i].modelo}</span>
     <span class='separador'>|</span>
-    <span class='outros'>${tv1.tamanho}</span>
+    <span class='outros'>${tvs[i].tamanho}</span>
     <span class='separador'>|</span>
+    </div>
+    </div>
+    <br>
     `)
+}
+
+
+
+
+var meusProd = new Favoritos(
+    meusProd.adicionarProduto(tv1)
+);
+
+
+
+
+
+
+
+
+
+
+
+
