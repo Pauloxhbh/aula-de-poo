@@ -96,7 +96,6 @@ for (i = 0; i < celulares.length; i++) {
     <span class='outros'>${celulares[i].ram}</span>
     <span class='separador'>|</span>
     <span class='outros'>${celulares[i].cameras}</span>
-    <span class='separador'>|</span>
     </div>
     </div>
     <br>
@@ -115,23 +114,15 @@ document.write(`
     <span class='outros'>${tvs[i].modelo}</span>
     <span class='separador'>|</span>
     <span class='outros'>${tvs[i].tamanho}</span>
-    <span class='separador'>|</span>
     </div>
     </div>
-    <br>
     `)
 }
 
 
-
-
-var meusProd = new Favoritos(
-    meusProd.adicionarProduto(tv1)
-);
-
-
-
-
+var meusProd = new Favoritos();
+meusProd.adicionarProduto(tv1)
+console.log(meusProd)
 
 
 
